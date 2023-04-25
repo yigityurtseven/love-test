@@ -57,7 +57,6 @@ async function sleep(ms) {
 
 
 async function calculate() {
-    console.log(import.meta.env.VITE_RAPIDAPI_KEY, import.meta.env.VITE_RAPIDAPI_HOST)
     if (name1.value.includes('yigithan') || name2.value.includes('yigithan')) {
         loading.value = true
         await sleep(10000);
