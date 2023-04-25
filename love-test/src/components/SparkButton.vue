@@ -401,5 +401,9 @@ button svg {
     .particle-pen {
         display: none;
     }
+
+    .spark {
+        display: none;
+    }
 }
 </style>

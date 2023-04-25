@@ -47,8 +47,8 @@ const loveResponse = ref(null);
 
 const url = 'https://love-calculator.p.rapidapi.com/getPercentage'
 const headers = {
-    'X-RapidAPI-Key': 'a502d8d0ebmshff360bcfca0e335p123814jsnadab29996476',
-    'X-RapidAPI-Host': 'love-calculator.p.rapidapi.com'
+    'X-RapidAPI-Key': import.meta.env.VITE_RAPIDAPI_KEY,
+    'X-RapidAPI-Host': import.meta.env.VITE_RAPIDAPI_HOST
 }
 
 async function sleep(ms) {
@@ -57,6 +57,7 @@ async function sleep(ms) {
 
 
 async function calculate() {
+    console.log(import.meta.env.VITE_RAPIDAPI_KEY, import.meta.env.VITE_RAPIDAPI_HOST)
     if (name1.value.includes('yigithan') || name2.value.includes('yigithan')) {
         loading.value = true
         await sleep(10000);
